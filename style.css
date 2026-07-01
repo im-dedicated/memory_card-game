@@ -1,42 +1,63 @@
-body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align:center;
-    background:#c7e5f3;
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  background-color: #7e5f3f;
+  margin: 0;
+  padding: 0;
 }
 
-.board{
-    width:440px;
-    margin:50px auto;
-    display:grid;
-    grid-template-columns:repeat(4,100px);
-    gap:10px;
+
+.board {
+  width: 440px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
 }
 
-.card{
-    width: 90px;
-    height:100px;
-    background:#513ee5;
-    color:transparent;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size: 50px;
-    cursor:pointer;
-    
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #513ee5;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.card.flip{
-    background:white;
-    color:black;
+.card.flipped {
+  background-color: #f9f9f9;
+  color: #513ee5;
+  transform: rotateY(180deg);
 }
 
-.card.match{
-    background:rgb(7, 149, 7);
-    color:white;
+
+.card.matched {
+  background-color: #4caf50;
+  color: white;
+  cursor: default;
 }
 
-button{
-    padding:10px 20px;
-    font-size:16px;
-    cursor:pointer;
+
+.card:hover {
+  background-color: #6a56e8;
+}
+
+
+@media (max-width: 500px) {
+  .board {
+    width: 320px;
+    grid-template-columns: repeat(4, 70px);
+    gap: 8px;
+  }
+
+  .card {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
 }
