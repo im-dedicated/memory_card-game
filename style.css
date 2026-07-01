@@ -1,0 +1,42 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align:center;
+    background:#c7e5f3;
+}
+
+.board{
+    width:440px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:repeat(4,100px);
+    gap:10px;
+}
+
+.card{
+    width: 90px;
+    height:100px;
+    background:#513ee5;
+    color:transparent;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 50px;
+    cursor:pointer;
+    
+}
+
+.card.flip{
+    background:white;
+    color:black;
+}
+
+.card.match{
+    background:rgb(7, 149, 7);
+    color:white;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    cursor:pointer;
+}
